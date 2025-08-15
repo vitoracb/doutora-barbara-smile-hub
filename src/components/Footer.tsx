@@ -1,18 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { 
   MessageCircle, 
-  Phone, 
   MapPin, 
   Mail,
   Instagram,
   Facebook,
   Heart
 } from "lucide-react";
-import draBarbaraImage from "@/assets/dra-barbara-queiroz.jpg";
+import draBarbaraImage from "@/assets/dra-barbara-nova.jpg";
 
 const Footer = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta com a Dra. Bárbara Queiroz.", "_blank");
+    window.open("https://wa.me/557398368085?text=Olá! Gostaria de agendar uma consulta com a Dra. Bárbara Queiroz.", "_blank");
   };
 
   return (
@@ -67,12 +66,22 @@ const Footer = () => {
               oferecendo tratamentos completos com foco no cuidado acolhedor e personalizado.
             </p>
             <div className="flex gap-3">
-              <Button variant="outline" size="icon" className="rounded-full">
+              <a 
+                href="https://www.instagram.com/drabarbaraodonto?igsh=em8xazV2NWJpeDBq"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center h-10 w-10 rounded-full border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors"
+              >
                 <Instagram className="h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="icon" className="rounded-full">
+              </a>
+              <a 
+                href="https://www.facebook.com/share/15wxZccegz/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center h-10 w-10 rounded-full border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors"
+              >
                 <Facebook className="h-4 w-4" />
-              </Button>
+              </a>
             </div>
           </div>
 
@@ -94,12 +103,8 @@ const Footer = () => {
             <h3 className="text-xl font-bold text-foreground">Contato</h3>
             <div className="space-y-3 text-muted-foreground">
               <div className="flex items-center gap-3">
-                <Phone className="h-4 w-4 text-primary" />
-                <span>(11) 99999-9999</span>
-              </div>
-              <div className="flex items-center gap-3">
                 <MessageCircle className="h-4 w-4 text-primary" />
-                <span>(11) 99999-9999</span>
+                <span>(73) 99836-8085</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-primary" />
@@ -107,7 +112,11 @@ const Footer = () => {
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-primary mt-1" />
-                <span>Rua das Flores, 123<br />Vila Madalena - São Paulo</span>
+                <span>Itacaré/BA</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 text-primary mt-1" />
+                <span>Serra Grande/BA</span>
               </div>
             </div>
           </div>
@@ -118,11 +127,11 @@ const Footer = () => {
             <div className="space-y-2 text-muted-foreground">
               <div>
                 <div className="font-medium text-foreground">Segunda à Sexta</div>
-                <div>8h às 18h</div>
+                <div>9h às 18h</div>
               </div>
               <div>
                 <div className="font-medium text-foreground">Sábados</div>
-                <div>8h às 14h</div>
+                <div>9h às 14h</div>
               </div>
               <div>
                 <div className="font-medium text-foreground">Domingos</div>
@@ -135,7 +144,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-muted-foreground text-sm">
-            © 2024 Dra. Bárbara Queiroz. Todos os direitos reservados.
+            © 2025 Dra. Bárbara Queiroz. Todos os direitos reservados.
           </div>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <span>CRO-SP: 123456</span>

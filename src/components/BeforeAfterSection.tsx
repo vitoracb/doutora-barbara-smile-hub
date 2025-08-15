@@ -50,7 +50,7 @@ const beforeAfterCases = [
 
 const BeforeAfterSection = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os resultados dos tratamentos.", "_blank");
+    window.open("https://wa.me/557398368085?text=Olá! Gostaria de saber mais sobre os resultados dos tratamentos.", "_blank");
   };
 
   return (

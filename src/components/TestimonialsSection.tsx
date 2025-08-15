@@ -49,7 +49,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Vi os depoimentos e gostaria de agendar uma consulta.", "_blank");
+    window.open("https://wa.me/557398368085?text=Olá! Vi os depoimentos e gostaria de agendar uma consulta.", "_blank");
   };
 
   return (

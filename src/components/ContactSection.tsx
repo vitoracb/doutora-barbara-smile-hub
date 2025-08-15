@@ -16,7 +16,7 @@ import dentalClinicImage from "@/assets/dental-clinic-interior.jpg";
 
 const ContactSection = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta com a Dra. Bárbara Queiroz.", "_blank");
+    window.open("https://wa.me/557398368085?text=Olá! Gostaria de agendar uma consulta com a Dra. Bárbara Queiroz.", "_blank");
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -24,7 +24,7 @@ const ContactSection = () => {
     // Handle form submission
     const formData = new FormData(e.target as HTMLFormElement);
     const message = `Olá! Meu nome é ${formData.get('name')}, telefone: ${formData.get('phone')}, email: ${formData.get('email')}. Mensagem: ${formData.get('message')}`;
-    window.open(`https://wa.me/5511999999999?text=${encodeURIComponent(message)}`, "_blank");
+    window.open(`https://wa.me/557398368085?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   return (
@@ -103,12 +103,22 @@ const ContactSection = () => {
             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-[var(--shadow-soft)]">
               <h3 className="font-semibold text-foreground mb-4">Siga-nos nas redes sociais</h3>
               <div className="flex gap-4">
-                <Button variant="outline" size="icon" className="rounded-full">
+                <a 
+                  href="https://www.instagram.com/drabarbaraodonto?igsh=em8xazV2NWJpeDBq"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center h-12 w-12 rounded-full border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors"
+                >
                   <Instagram className="h-5 w-5" />
-                </Button>
-                <Button variant="outline" size="icon" className="rounded-full">
+                </a>
+                <a 
+                  href="https://www.facebook.com/share/15wxZccegz/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center h-12 w-12 rounded-full border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors"
+                >
                   <Facebook className="h-5 w-5" />
-                </Button>
+                </a>
               </div>
             </div>
           </div>

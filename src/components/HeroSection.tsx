@@ -1,10 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Phone, MapPin } from "lucide-react";
-import draBarbaraImage from "@/assets/dra-barbara-queiroz.jpg";
+import draBarbaraImage from "@/assets/dra-barbara-nova.jpg";
 
 const HeroSection = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta com a Dra. Bárbara Queiroz.", "_blank");
+    console.log("WhatsApp button clicked!");
+    const message = encodeURIComponent("Olá! Gostaria de agendar uma consulta com a Dra. Bárbara Queiroz.");
+    const url = `https://wa.me/557398368085?text=${message}`;
+    console.log("Opening URL:", url);
+    
+    // Tenta abrir em nova aba
+    const newWindow = window.open(url, "_blank");
+    
+    // Se não conseguir abrir, tenta abrir na mesma aba
+    if (!newWindow) {
+      window.location.href = url;
+    }
   };
 
   return (
@@ -19,12 +30,16 @@ const HeroSection = () => {
             {/* Contact info */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-primary" />
-                <span>(11) 99999-9999</span>
+                <MessageCircle className="h-4 w-4 text-primary" />
+                <span>(73) 99836-8085</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span>São Paulo - SP</span>
+                <span>Itacaré/BA</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-primary" />
+                <span>Serra Grande/BA</span>
               </div>
             </div>
 
@@ -40,25 +55,18 @@ const HeroSection = () => {
               </p>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button 
-                variant="whatsapp" 
-                size="xl"
-                onClick={handleWhatsAppClick}
-                className="group"
+            {/* CTA Button */}
+            <div className="flex justify-center lg:justify-start relative z-50">
+              <a 
+                href="https://wa.me/557398368085?text=Olá! Gostaria de agendar uma consulta com a Dra. Bárbara Queiroz."
+                target="_blank"
+                className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg text-lg inline-flex items-center gap-2 cursor-pointer relative z-50"
+                style={{zIndex: 9999}}
+
               >
-                <MessageCircle className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                Agende sua Consulta Agora
-              </Button>
-              <Button 
-                variant="outline" 
-                size="xl"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Ligar Agora
-              </Button>
+                <MessageCircle className="h-5 w-5" />
+                Agende sua Consulta
+              </a>
             </div>
 
             {/* Trust indicators */}

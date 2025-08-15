@@ -44,7 +44,7 @@ const faqs = [
 
 const FAQSection = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Tenho algumas dúvidas sobre os tratamentos.", "_blank");
+    window.open("https://wa.me/557398368085?text=Olá! Tenho algumas dúvidas sobre os tratamentos.", "_blank");
   };
 
   return (
